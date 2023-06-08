@@ -4,8 +4,9 @@ import Populars from '../component/Populars'
 function Homep() {
   return (
     <div>
-      <Veggie/>
+      
       <Populars/>
+      <Veggie/>
     </div>
   )
 }
