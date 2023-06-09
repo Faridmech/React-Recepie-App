@@ -1,15 +1,15 @@
 
 import {LuBeef} from "react-icons/lu"
-import {FaHamburger} from "react-icons/fa"
 import {  GiChickenOven, GiMeat} from "react-icons/gi"
 import {BsCloudLightningRainFill} from "react-icons/bs"
 import styled from "styled-components"
 import { NavLink } from "react-router-dom"
 
 
-function Categories() {
+export const Categories = () => {
   return (
     <List>
+
       <NavLink to={"/cuisine/meat"}>
         <GiMeat/>
         <h4>Meat</h4>
@@ -41,4 +41,3 @@ const List = styled.div`
     justify-content: center;
     marign: 2rem 0rem;
 `
-export default Categories
