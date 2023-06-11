@@ -1,6 +1,7 @@
+import { Text } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-
+import { Wrap, WrapItem } from '@chakra-ui/react'
 
 
 function Cuisine() {
@@ -22,16 +23,42 @@ function Cuisine() {
     }
 
     useEffect(()=>{
-       //getCuisine("meat")
-       console.log(getCuisine())
+       
+      getCuisine()
+       
     }, [type])
 
 
 
   return (
-    <div>
-      salam
-    </div>
+    <>
+    
+                 <Text 
+                      bgGradient="linear(to-l, #7928CA, #FF0080)"
+                      bgClip="text"
+                      fontSize="1.5rem"
+                      fontWeight="extrabold"
+                      textAlign={[ 'left', 'center' ]}>
+                   Category: {type.toLocaleUpperCase()}
+                  </Text>
+                 
+                   {meals.map((meal)=>{
+                        return(
+                            
+                                <>
+                                
+                                    <p>{meal.strMeal}</p>
+                                    <img src={meal.strMealThumb} alt="" />
+                                    
+                                </>
+                            
+                        )
+                    })}
+                
+           
+    
+      
+    </>
   )
 }
 

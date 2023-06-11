@@ -10,6 +10,6 @@ export const AppRouter = () =>{
             <Route index element={<HomePage />}/>
             <Route path='cuisine/:type'  element={<Cuisine />}/>
           </Route>
-        </Routes>
+    </Routes>
   )
 }
