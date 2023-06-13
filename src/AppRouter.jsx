@@ -10,7 +10,7 @@ export const AppRouter = () =>{
           <Route  path='/' element={<Layout />}>
             <Route index element={<HomePage />}/>
             <Route path='cuisine/:type'  element={<Cuisine />}/>
-            <Route path='search/:search'  element={<Search />}/>
+            <Route path='search/:searched'  element={<Search />}/>
           </Route>
     </Routes>
   )

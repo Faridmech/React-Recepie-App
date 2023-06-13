@@ -17,7 +17,7 @@ function Veggie() {
       "https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast"
     );
     const data = await api.json();
-    console.log(data);
+    
     setChicken(data.meals);
   };
 

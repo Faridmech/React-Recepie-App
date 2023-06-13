@@ -1,22 +1,23 @@
-import { Center, Input } from "@chakra-ui/react";
+import { Button, Center, Input } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const Inputed: React.FC = () => {
   const [input, setInput] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
 
   const submithandler = (e) => {
     e.preventDefault();
     navigate("/search/" +input)
-    console.log(e.target.value)
+  
   };
 
   return (
-    <Center>
+    <Center >
+      
       <Input
-        onSubmit={submithandler}
+        
         placeholder="Search for ..."
         focusBorderColor="grey"
         w="50%"
@@ -26,7 +27,15 @@ export const Inputed: React.FC = () => {
         onChange={(e) => setInput(e.target.value)}
         value={input}
       />
+     
+      <Button 
+      onClick={submithandler}
+      marginTop="1rem"
+      border="1px solid white"
+      >Search </Button>
+        
     </Center>
     
   );
 };
+console.log(Input)

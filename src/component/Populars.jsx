@@ -26,7 +26,7 @@ function Populars() {
 
       setCategories(data.categories);
     }
-    // console.log(data.categories)
+    
   };
 
   return (

@@ -25,7 +25,7 @@ function Cuisine() {
     const recipes = await data.json();
     setCuisine(recipes.meals);
 
-    console.log(recipes.meals);
+    
   };
 
   useEffect(() => {
