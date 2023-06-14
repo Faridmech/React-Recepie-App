@@ -38,4 +38,3 @@ export const Inputed: React.FC = () => {
     
   );
 };
-console.log(Input)

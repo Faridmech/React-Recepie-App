@@ -51,6 +51,7 @@ function Cuisine() {
         justifyContent="center"
       >
         <Grid gridTemplateColumns="25%  25% 25% 25%" gap="1rem">
+          
           {meals.map((meal) => {
             return (
               <>
