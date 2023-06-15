@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import {
   Box,
@@ -11,6 +11,9 @@ import {
   
 } from "@chakra-ui/react";
 import { cutWords } from "layout/cutWord";
+
+
+
 export const Search: React.FC = () => {
   const { searched } = useParams();
   const [search, setSearch] = useState<{ strMeal: string, strMealThumb: string }[]>([]);
@@ -32,13 +35,17 @@ export const Search: React.FC = () => {
 
   return (
     <>
+    <Link to={`details/`}>
     <Box
     
      m="0 auto"
-     display="flex"
+     
+     display="flex margin-0"
      alignItems="center"
      justifyContent="center"
      >
+
+
 
    <Grid gridTemplateColumns="25%  25% 25% 25%" gap="1rem">
     
@@ -57,6 +64,7 @@ export const Search: React.FC = () => {
       })}
       </Grid >
       </Box>
+      </Link>
     </>
   );
 };

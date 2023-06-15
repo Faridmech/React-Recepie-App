@@ -3,6 +3,7 @@ import { Layout } from './layout';
 import { HomePage } from './pages/Homep';
 import Cuisine from './pages/Cuisine';
 import { Search } from 'pages/Search';
+import { Details } from 'pages/Details';
 
 export const AppRouter = () =>{
   return (
@@ -11,6 +12,7 @@ export const AppRouter = () =>{
             <Route index element={<HomePage />}/>
             <Route path='cuisine/:type'  element={<Cuisine />}/>
             <Route path='search/:searched'  element={<Search />}/>
+            <Route path='details/:detail'  element={<Details />}/>
           </Route>
     </Routes>
   )

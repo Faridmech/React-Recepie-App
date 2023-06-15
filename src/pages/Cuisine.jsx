@@ -12,6 +12,10 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Wrap, WrapItem } from "@chakra-ui/react";
 import { cutWords } from "layout/cutWord";
+import { Link } from "react-router-dom";
+
+
+
 
 function Cuisine() {
   const { type } = useParams();
