@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { styled } from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-
+import { Link } from "react-router-dom";
 import "@splidejs/react-splide/css";
 import { Box } from "@chakra-ui/react";
 
@@ -25,10 +25,10 @@ function Populars() {
       localStorage.setItem("category", JSON.stringify(data.categories));
 
       setCategories(data.categories);
+      
     }
-    
   };
-
+      
   return (
     <Box width="90%" margin="0 auto">
       <Wrapper>
@@ -45,10 +45,12 @@ function Populars() {
         >
           {categories.map((category) => {
             return (
-              <SplideSlide key={category.idCategory}>
+              <SplideSlide  key={category.idCategory}>
                 <Card>
-                  <p>{category.strCategory}</p>
-                  <img src={category.strCategoryThumb}></img>
+                  
+                    <p >{category.strCategory}</p>
+                    <img src={category.strCategoryThumb}></img>
+                  
                 </Card>
               </SplideSlide>
             );

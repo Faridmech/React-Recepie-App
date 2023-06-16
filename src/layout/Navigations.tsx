@@ -26,7 +26,7 @@ export const Navigations: React.FC = () => {
       {NAVS.map((nav) => {
         const isActive = checkIsActive(nav.to);
         return (
-          <Link to={nav.to}>
+          <Link key={nav.to} to={nav.to}>
             <VStack
               spacing="0"
               transition="0.2s ease-in"

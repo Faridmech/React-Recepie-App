@@ -12,7 +12,7 @@ export const AppRouter = () =>{
             <Route index element={<HomePage />}/>
             <Route path='cuisine/:type'  element={<Cuisine />}/>
             <Route path='search/:searched'  element={<Search />}/>
-            <Route path='details/:detail'  element={<Details />}/>
+            <Route path='details/:id'  element={<Details />}/>
           </Route>
     </Routes>
   )

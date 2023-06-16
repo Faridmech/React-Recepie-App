@@ -4,6 +4,9 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { cutWords } from "layout/cutWord";
 import "@splidejs/react-splide/css";
 import { Box } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+
+
 
 function Veggie() {
   const [meals, setChicken] = useState([]);
@@ -38,10 +41,12 @@ function Veggie() {
           >
             {meals.map((meal) => {
               return (
-                <SplideSlide>
-                  <Card>
+                <SplideSlide key={meal.idMeal}>
+                  <Card >
+                    <Link to={"/details/"+ meal.idMeal}>
                     <p>{cutWords(meal.strMeal)}</p>
                     <img src={meal.strMealThumb}></img>
+                    </Link>
                   </Card>
                 </SplideSlide>
               );

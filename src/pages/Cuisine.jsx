@@ -15,8 +15,6 @@ import { cutWords } from "layout/cutWord";
 import { Link } from "react-router-dom";
 
 
-
-
 function Cuisine() {
   const { type } = useParams();
 
@@ -28,9 +26,9 @@ function Cuisine() {
     );
     const recipes = await data.json();
     setCuisine(recipes.meals);
-
-    
+    console.log("Cusine", recipes.meals);
   };
+ 
 
   useEffect(() => {
     getCuisine();
@@ -44,6 +42,7 @@ function Cuisine() {
         fontSize="1.5rem"
         fontWeight="extrabold"
         textAlign={["left", "center"]}
+       
       >
         Category: {type.toLocaleUpperCase()}
       </Text>
@@ -55,16 +54,17 @@ function Cuisine() {
         justifyContent="center"
       >
         <Grid gridTemplateColumns="25%  25% 25% 25%" gap="1rem">
-          
           {meals.map((meal) => {
             return (
               <>
-                <Box>
+              <Link to={"/details/"+ meal.idMeal}>
+                <Box key={meal.idMeal}>
                   <Text pl="20px" color="brown" fontWeight="500">
                     {cutWords(meal.strMeal)}{" "}
                   </Text>
                   <Image src={meal.strMealThumb} alt="" w="250px" h="200px" />
                 </Box>
+                </Link>
               </>
             );
           })}
